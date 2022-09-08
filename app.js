@@ -1,5 +1,6 @@
 const express=require("express")
 const app=express()
+const port=process.env.PORT || 3000
 app.get("/student/studentsList", (req, res)=>{
 res.status(200).send({
     "results": [
@@ -13,4 +14,4 @@ res.status(200).send({
     res.status(404).send("route not found")
    })
 })
-app.listen(8080, ()=>{console.log("Server Started")})
+app.listen(port, ()=>{console.log("Server Started")})
